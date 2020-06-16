@@ -1,0 +1,140 @@
+// Mobile Styles
+
+@use '../base' as *;
+
+.container {
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../assets/images/bg-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include setBoxSize(100vh, 100%);
+}
+
+.storage {
+  width: 100%;
+  display: grid;
+  gap: 15px;
+
+  &__options, &__info {
+    border-radius: 10px;
+    background: $dark-blue;
+  }
+
+  &__options {
+    padding: 40px;
+    border-top-right-radius: 100px;
+  }
+
+  &__info {
+    padding: 30px 30px 55px;
+    position: relative;
+  }
+
+  &__description {
+    text-align: center;
+  }
+
+  &__left {
+    width: max-content;
+    padding: 10px 25px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 10px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    border-radius: 10px;
+    background: $light-color;
+
+    h1, span {
+      color: $very-dark-blue;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    span {
+      font-size: .9em;
+      letter-spacing: .1em;
+    }
+  }
+}
+
+.options-container {
+  height: 50px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  place-items: center;
+  column-gap: 15px;
+}
+
+.option {
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 200ms;
+  background: $very-dark-blue;
+  @include setBoxSize(100%, 100%);
+
+  &:hover {
+    background: $light-color;
+  }
+}
+
+.progress {
+  margin-top: 15px;
+  display: grid;
+  row-gap: 10px;
+
+  &__bar {
+    padding: 3px;
+    border-radius: 20px;
+    background: lighten($very-dark-blue, 7%);
+    @include setBoxSize(20px, 100%);
+  }
+
+  &__value {
+    padding: 2px;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 20px;
+    background: $primary-color;
+    @include setBoxSize(100%, 81.5%);
+  }
+
+  &__dot{
+    display: block;
+    border-radius: 50%;
+    background: $light-color;
+    @include setBoxSize(inherit, 10px);
+  }
+
+  &__values {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  font-size: .8em;
+  line-height: 1.5em;
+
+  img {
+    vertical-align: middle;
+  }
+}

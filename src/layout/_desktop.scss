@@ -1,0 +1,44 @@
+// Desktop Styles
+
+@use '../base' as *;
+
+@media screen and (min-width: 950px) {
+  .container {
+    background-image: url('../../assets/images/bg-desktop.svg');
+    background-position-y: bottom;
+    background-size: 100% 50%;
+  }
+
+  .storage {
+    max-width: 950px;
+    grid-template-columns: 350px 1fr;
+    column-gap: 30px;
+
+    &__info {
+      height: max-content;
+      padding: 40px;
+      align-self: end;
+    }
+
+    &__description {
+      text-align: left;
+    }
+
+    &__left {
+      left: unset;
+      transform: unset;
+      right: 40px;
+      top: -45px;
+      border-bottom-right-radius: 0;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        border-left: 20px solid transparent;
+        border-top: 20px solid $light-color;
+      }
+    }
+  }
+}
