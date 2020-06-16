@@ -1,5 +1,5 @@
 # Frontend Mentor Challenge #1 - Fylo data storage component
-This is a frontend coding challenge by [Frontend Mentor](https://www.frontendmentor.io).
+📌 This is a frontend coding challenge by [Frontend Mentor](https://www.frontendmentor.io).
 
 ## Preview
 ![Design preview for the Fylo data storage component coding challenge](./assets/design/desktop-preview.jpg)
